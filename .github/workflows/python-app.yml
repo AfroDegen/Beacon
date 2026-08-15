@@ -24,3 +24,7 @@ jobs:
 
       - name: Check Python syntax
         run: python -m py_compile beacon.py
+      - name: Run Beacon
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python beacon.py
